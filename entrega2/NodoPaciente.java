@@ -8,19 +8,19 @@ public class NodoPaciente {
         this.siguiente = null;
     }
 
-    public int getPaciente() {
+    public Paciente getPaciente() {
         return paciente;
     }
 
-    public void setPaciente(int dato) {
+    public void setPaciente(Paciente paciente) {
         this.paciente = paciente;
     }
 
-    public Nodo getSiguiente() {
+    public NodoPaciente getSiguiente() {
         return siguiente;
     }
 
-    public void setSiguiente(Nodo siguiente) {
+    public void setSiguiente(NodoPaciente siguiente) {
         this.siguiente = siguiente;
     }
 }

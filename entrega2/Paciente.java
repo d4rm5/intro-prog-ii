@@ -1,9 +1,12 @@
-class Paciente {
+import java.io.Serializable;
+
+class Paciente implements Serializable {
 
     private int numeroPaciente;
     private String nombre;
     private String apellido;
     private String domicilio;
+    private int edad;
     private boolean OS;
 
     public Paciente(
@@ -11,12 +14,13 @@ class Paciente {
         String nombre,
         String apellido,
         String domicilio,
+        int edad,
         boolean OS
     ) {
         this.numeroPaciente = numeroPaciente;
         this.nombre = nombre;
         this.apellido = apellido;
-        this.domiclio = domicilio;
+        this.domicilio = domicilio;
         this.OS = OS;
     }
 
@@ -34,6 +38,10 @@ class Paciente {
 
     public String getDomicilio() {
         return this.domicilio;
+    }
+
+    public int getEdad() {
+        return this.edad;
     }
 
     public boolean getOS() {
@@ -56,7 +64,26 @@ class Paciente {
         this.domicilio = domicilio;
     }
 
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
+
     public void setOS(boolean OS) {
         this.OS = OS;
+    }
+
+    public void printPaciente() {
+        System.out.println("Numero Paciente: " + this.numeroPaciente);
+			System.out.println("Nombre: " + this.nombre);
+			System.out.println("Apellido: " + this.apellido);
+			System.out.println("Domicilio: " + this.domicilio);
+			System.out.println("Edad: " + this.edad);
+			System.out.println("Obra Social: " + (this.OS ? "Sí" : "No"));
+    }
+
+    @Override
+    public String toString() {
+        return "Paciente{nombre='" + nombre + "', apellido='" + apellido + "', domicilio='" + domicilio + 
+               "', edad=" + edad + ", OS=" + OS + "}";
     }
 }
