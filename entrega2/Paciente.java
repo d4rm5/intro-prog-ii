@@ -21,6 +21,7 @@ class Paciente implements Serializable {
         this.nombre = nombre;
         this.apellido = apellido;
         this.domicilio = domicilio;
+        this.edad = edad;
         this.OS = OS;
     }
 
