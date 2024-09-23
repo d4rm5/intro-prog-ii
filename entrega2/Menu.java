@@ -103,12 +103,14 @@ public class Menu {
 
         if (listaSimplePacientes.existePaciente(numeroPaciente)) {
             System.out.println("Numero de paciente ya existe.");
+            System.out.println();
             return;
         }
 
         Paciente nuevoPaciente = new Paciente(numeroPaciente, nombre, apellido, domicilio, edad, OS);
         listaSimplePacientes.insertarPacienteEnOrden(nuevoPaciente);
         System.out.println("Paciente agregado con éxito.");
+        System.out.println();
     }
 
     private static void casoDos(Scanner scn, ListaSimplePacientes listaSimplePacientes) {
@@ -125,6 +127,7 @@ public class Menu {
 
     private static void casoCuatro(ListaSimplePacientes listaSimplePacientes) {
         System.out.println("Numero del paciente de mayor edad: " + listaSimplePacientes.mostrarPacienteMayorEdad());
+        System.out.println();
     }
 
     private static void casoCinco(ListaSimplePacientes listaSimplePacientes) {
