@@ -74,12 +74,13 @@ class Paciente implements Serializable {
     }
 
     public void printPaciente() {
-        System.out.println("Numero Paciente: " + this.numeroPaciente);
+            System.out.println("Paciente número: " + this.numeroPaciente);
 			System.out.println("Nombre: " + this.nombre);
 			System.out.println("Apellido: " + this.apellido);
 			System.out.println("Domicilio: " + this.domicilio);
 			System.out.println("Edad: " + this.edad);
 			System.out.println("Obra Social: " + (this.OS ? "Sí" : "No"));
+			System.out.println();
     }
 
     @Override
