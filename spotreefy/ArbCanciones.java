@@ -1,0 +1,3 @@
+class ArbCanciones {
+    NodoCancion root;
+}
